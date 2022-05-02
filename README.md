@@ -55,7 +55,12 @@ instead of segment tree, sparse table perform very well.
 ## Code
 Code is available in Sparse_Table_Assignment.cpp file.
 
-## Contact
+## Execution Screenshot
+<a href="https://github.com/hanumangod/Sparse_Table">
+    <img src="ADS_Execution.png" alt="Logo" width="800" height="600">
+</a>
+
+## Group Details
 Hetarth Parikh - @Hetarth_Parikh - 19bce155@nirmauni.ac.in
 
 Dhvanil Patel - @Dhvanil_Patel - 19bce165@nirmauni.ac.in
