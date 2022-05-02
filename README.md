@@ -1,7 +1,7 @@
 # Sparse_Table
 ADS assignment - Implementation of Sparse Table using C++
 
-What is a Sparse Table?
+## What is a Sparse Table?
 
 A sparse table is a data structure that is used to answer range or interval
 queries for a given set of numbers.
@@ -13,12 +13,13 @@ in O(1) time only.
 It is used to handle operations that have idempotent (x op x = x) properties
 like we can resolve minimum or maximum or gcd queries because these
 are all idempotent functions.
-Operations :
+
+## Operations :
 ● Create / Build
 ● Minimum Query
 ● Maximum Query
 
-Construction of Sparse Table :
+## Construction of Sparse Table :
 
 The main idea behind Sparse Tables is to precompute all answers for
 range queries with a power of two lengths. After that, a different range
@@ -30,7 +31,7 @@ the F(i,i+1,...,i+2^(j-1)) and can be calculated using previous information as
 below,
 st[i][j] = F(st[i][j-1], st[i-1][i+(1<<(j-1)][j-1])
 
-Queries On Sparse Table :
+## Queries On Sparse Table :
 
 Queries are the most crucial part of a sparse table because it resolves
 queries in O(1). We know that even if the interval overlaps result of the
@@ -40,7 +41,7 @@ contained so using a sparse table we can answer that query as,
 k = log2(r - l + 1)
 F(st[l][k],st[r - (1 << k) + 1][k])
   
-Applications :
+## Applications :
   
 1. In the database systems, many times we want to find some records in a
 particular interval whose values are maximum or minimum in that range,
@@ -51,3 +52,5 @@ the minimum or maximum in some specific range for analysis purposes.
 fast and the system itself doesn’t allow update operation at that place
 instead of segment tree, sparse table perform very well.
 
+## Code
+Code is available in Sparse_Table_Assignment.cpp file.
